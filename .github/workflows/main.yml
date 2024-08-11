@@ -22,8 +22,8 @@ jobs:
           zip -r repository_${{ env.CURRENT_TIME }}.zip .
       - name: Move ZIP file
         run: |
-           ls .
-           
+           mkdir ZIP
+           mv repository_${{ env.CURRENT_TIME }}.zip ZIP/ .
       - name: Upload to Cloudflare R2
         uses: ryand56/r2-upload-action@latest # Can be any release
         with:
@@ -31,7 +31,7 @@ jobs:
           r2-access-key-id: ${{ secrets.R2_ACCESS_KEY_ID }}
           r2-secret-access-key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           r2-bucket: ${{ secrets.R2_BUCKET }}
-          source-dir: ./home/runner/work/MaaResource/MaaResource/repository_${{ env.CURRENT_TIME }}.zip
+          source-dir: ./home/runner/work/MaaResource/MaaResource/ZIP
           destination-dir: ./ # Can be anything as long as it is an actual path
           output-file-url: 'false' # defaults to true
           multipart-size: 100 # If the file size is greater than the value provided here, then use multipart upload
