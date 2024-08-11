@@ -20,7 +20,10 @@ jobs:
       - name: Create a ZIP file
         run: |
           zip -r repository_${{ env.CURRENT_TIME }}.zip .
-
+      - name: Move ZIP file
+        run: |
+           ls .
+           
       - name: Upload to Cloudflare R2
         uses: ryand56/r2-upload-action@latest # Can be any release
         with:
