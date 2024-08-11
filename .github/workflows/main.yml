@@ -23,7 +23,8 @@ jobs:
       - name: Move ZIP file
         run: |
            mkdir ZIP
-           mv repository_${{ env.CURRENT_TIME }}.zip ZIP/ .
+           mv repository_${{ env.CURRENT_TIME }}.zip ZIP/
+           .
       - name: Upload to Cloudflare R2
         uses: ryand56/r2-upload-action@latest # Can be any release
         with:
