@@ -23,7 +23,7 @@ jobs:
 
       - name: Create a Version json
         run: |
-          echo '{"version": "${CURRENT_TIME}"}' > latest.json .
+          echo '{"version": ${CURRENT_TIME}}' > latest.json .
 
       - name: Move ZIP and json file
         run: |
