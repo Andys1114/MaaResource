@@ -17,14 +17,9 @@ jobs:
         id: get_time
         run: echo "CURRENT_TIME=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
         
-      - name: Move need file
-        run: |
-          mkdir Need
-          mv resource cache Need/
-          cd Need
       - name: Create a ZIP file
         run: |
-          zip -r latest.zip .
+          zip -r latest.zip resource cache
       
       - name: Create a Version json
         run: |
