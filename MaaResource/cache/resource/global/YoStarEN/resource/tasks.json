@@ -1,0 +1,21 @@
+{
+    "HS-OpenOcr": {
+        "text": [
+            "Here",
+            "People",
+            "Sows"
+        ]
+    },
+    "HSChapterToHS": {
+        "text": [
+            "Agricultural",
+            "Plate",
+            "AGRICULTURAL",
+            "PLATE"
+        ]
+    },
+    "Mizuki@Roguelike@GetDropSelectRecruit": {
+        "templThreshold": 0.8,
+        "template": "Mizuki@Roguelike@GetDropSelectRecruit.png"
+    }
+}

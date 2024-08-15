@@ -1,0 +1,21 @@
+{
+    "HS-OpenOcr": {
+        "text": [
+            "懐黍離",
+            "イベント開催中",
+            "荒城中枢",
+            "大江北岸",
+            "ステージ開放中"
+        ]
+    },
+    "HSChapterToHS": {
+        "text": [
+            "栽培区画",
+            "栽培",
+            "区画"
+        ]
+    },
+    "StageEntries": {
+        "templThreshold": 0.7
+    }
+}
