@@ -10,15 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout target repository
+    - name: Checkout your repository
       uses: actions/checkout@v3
-      with:
-        repository: MaaAssistantArknights/MaaResource
-        path: MaaResource
+
+    - name: Clone MaaResource repository to temporary directory
+      run: |
+        git clone --depth 1 https://github.com/MaaAssistantArknights/MaaResource.git MaaResourceTemp
+        rsync -avh MaaResourceTemp/ MaaResource/ --exclude .git
 
     - name: Sync content to your repository
       run: |
-        rsync -avh MaaResource/ ./
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git add .
