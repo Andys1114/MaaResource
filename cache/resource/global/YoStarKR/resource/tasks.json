@@ -1,14 +1,20 @@
 {
-    "HS-OpenOcr": {
-        "text": [
-            "회서리",
-            "이벤트",
-            "개방중"
-        ]
+    "OrundumActivities": {
+        "doc": "Orundum Lucky Draw from Limited Event",
+        "text": ["용문", "복권방", "소원"],
+        "roi": [5, 65, 170, 110]
     },
-    "HSChapterToHS": {
-        "text": [
-            "경작지"
-        ]
+    "OrundumActivitiesChoose": {
+        "text": ["행운티켓", "선택"]
+    },
+    "OrundumActivitiesConfirm": {
+        "text": ["뽑기"]
+    },
+    "AS-OpenOcr": {
+        "text": ["태양을", "뿌리쳐라", "이벤트", "개방중"],
+        "roi": [0, 500, 500, 150]
+    },
+    "ASChapterToAS": {
+        "text": ["시민", "정원"]
     }
 }

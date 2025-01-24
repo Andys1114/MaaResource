@@ -1,75 +1,70 @@
 {
-    "AS-9": {
-        "algorithm": "JustReturn",
-        "sub": ["AS-OpenOpt"],
-        "next": ["AS-9@SideStoryStage", "AS-9@SwipeToStage"]
-    },
-    "AS-8": {
-        "algorithm": "JustReturn",
-        "sub": ["AS-OpenOpt"],
-        "next": ["AS-8@SideStoryStage", "AS-8@SwipeToStage"]
-    },
-    "AS-7": {
-        "algorithm": "JustReturn",
-        "sub": ["AS-OpenOpt"],
-        "next": ["AS-7@SideStoryStage", "AS-7@SwipeToStage"]
-    },
-    "AS-6": {
-        "algorithm": "JustReturn",
-        "sub": ["AS-OpenOpt"],
-        "next": ["AS-6@SideStoryStage", "AS-6@SwipeToStage"]
-    },
-    "AS-OpenOpt": {
-        "algorithm": "JustReturn",
-        "next": ["AS-OpenOcr"]
-    },
-    "AS-Open": {
-        "baseTask": "AS-OpenOcr",
-        "Doc": "先不写"
-    },
-    "AS-OpenOcr": {
-        "baseTask": "SS-OpenOcr",
-        "text": [
-            "太阳甩在身后",
-            "太阳",
-            "阳甩",
-            "甩在",
-            "在身",
-            "身后",
-            "市民花园",
-            "市民",
-            "民花",
-            "花园",
-            "丰获集会",
-            "丰获",
-            "获集",
-            "集会",
-            "藏珍宝库",
-            "藏珍",
-            "珍宝",
-            "宝库"
-        ],
-        "roi": [103, 538, 175, 25],
-        "next": ["ASChapterToAS"]
-    },
-    "ASChapterToAS": {
-        "algorithm": "OcrDetect",
-        "action": "ClickSelf",
-        "text": ["市民", "花园", "市民花园"],
-        "preDelay": 3000,
-        "roi": [1025, 381, 214, 149],
-        "next": ["#self", "ChapterSwipeToTheRight"]
-    },
-    "AS-9@SideStoryStage": {
-        "text": ["AS-9"]
-    },
-    "AS-8@SideStoryStage": {
-        "text": ["AS-8"]
-    },
-    "AS-7@SideStoryStage": {
-        "text": ["AS-7"]
-    },
-    "AS-6@SideStoryStage": {
-        "text": ["AS-6"]
-    }
+  "InfrastConfirmButton": {
+    "specificRect": [1108, 667, 22, 22]
+  },
+  "InfrastDormConfirmButton": {
+    "specificRect": [1108, 667, 22, 22]
+  },
+  "OR-9": {
+    "algorithm": "JustReturn",
+    "sub": ["OR-OpenOpt"],
+    "next": ["OR-9@SideStoryStage", "OR-9@SwipeToStage"]
+  },
+  "OR-9@SideStoryStage": {
+    "text": ["OR-9"]
+  },
+  "OR-8": {
+    "algorithm": "JustReturn",
+    "sub": ["OR-OpenOpt"],
+    "next": ["OR-8@SideStoryStage", "OR-8@SwipeToStage"]
+  },
+  "OR-8@SideStoryStage": {
+    "text": ["OR-8"]
+  },
+  "OR-7": {
+    "algorithm": "JustReturn",
+    "sub": ["OR-OpenOpt"],
+    "next": ["OR-7@SideStoryStage", "OR-7@SwipeToStage"]
+  },
+  "OR-7@SideStoryStage": {
+    "text": ["OR-7"]
+  },
+  "OR-5": {
+    "algorithm": "JustReturn",
+    "sub": ["OR-OpenOpt"],
+    "next": ["OR-5@SideStoryStage", "OR-5@SwipeToStage"]
+  },
+  "OR-5@SideStoryStage": {
+    "text": ["OR-5"]
+  },
+  "OR-4": {
+    "algorithm": "JustReturn",
+    "sub": ["OR-OpenOpt"],
+    "next": ["OR-4@SideStoryStage", "OR-4@SwipeToStage"]
+  },
+  "OR-4@SideStoryStage": {
+    "text": ["OR-4"]
+  },
+  "OR-OpenOpt": {
+    "algorithm": "JustReturn",
+    "next": ["OR-OpenOcr", "OR-Open"]
+  },
+  "OR-Open": {
+    "baseTask": "SS-Open",
+    "template": "StageSideStory.png",
+    "next": ["ORChapterToOR"]
+  },
+  "OR-OpenOcr": {
+    "baseTask": "SS-OpenOcr",
+    "text": ["相见欢", "阅世情", "怅别离"],
+    "next": ["ORChapterToOR"]
+  },
+  "ORChapterToOR": {
+    "algorithm": "OcrDetect",
+    "action": "ClickSelf",
+    "text": ["识七味", "识七", "七味"],
+    "preDelay": 3000,
+    "roi": [786, 478, 201, 144],
+    "next": ["#self", "ChapterSwipeToTheRight"]
+  }
 }
