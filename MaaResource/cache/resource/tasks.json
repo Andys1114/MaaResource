@@ -1,8 +1,11 @@
 {
     "StageResource": {
-        "roi": [600, 600, 250, 110]
+        "roi": [462, 600, 140, 120]
     },
     "Roguelike@IntegratedStrategies": {
-        "roi": [963, 599, 148, 121]
+        "roi": [884, 606, 146, 114]
+    },
+    "StageTheme": {
+        "roi": [243, 598, 147, 122]
     }
 }
